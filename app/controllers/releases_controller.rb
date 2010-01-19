@@ -1,11 +1,17 @@
 class ReleasesController < ApplicationController
+  before_filter :login_required, :except => [:index, :show]
+  
   def index
-    @releases = Release.find(:all, :order => "release_date ASC")
+    @releases = Release.find(:all, :order => "release_date DESC")
     
     respond_to do |format| 
       format.html 
       format.xml { render :layout => false, :xml => @releases.to_xml } 
     end
+  end
+  
+  def show
+    @release = Release.find params[:id]
   end
   
   def new
@@ -44,5 +50,13 @@ class ReleasesController < ApplicationController
     flash[:notice] = "#{release.title} deleted."
     redirect_to :action => "index"
   end
+  
+  private
+    def login_required
+      unless current_admin
+        flash[:error] = 'Only logged in admins an access this page.'
+        redirect_to releases_path
+      end
+    end
   
 end

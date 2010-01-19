@@ -46,4 +46,5 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :artists
   map.resources :releases
+  map.resources :admin_sessions
 end
