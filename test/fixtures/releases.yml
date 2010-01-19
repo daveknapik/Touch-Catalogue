@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  catalogue_number: MyString
+  title: MyString
+  duration: MyString
+  track_listing: MyText
+  release_date: 2010-01-18
+  cover_art_url: MyString
+  release_url: MyString
+  itunes_url: MyString
+  mp3_sample_url: MyString
+  description: MyText
+  reviews: MyText
+
+two:
+  catalogue_number: MyString
+  title: MyString
+  duration: MyString
+  track_listing: MyText
+  release_date: 2010-01-18
+  cover_art_url: MyString
+  release_url: MyString
+  itunes_url: MyString
+  mp3_sample_url: MyString
+  description: MyText
+  reviews: MyText

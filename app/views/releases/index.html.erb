@@ -1,0 +1,30 @@
+<% title 'Releases' %>
+
+<p>
+	<%= link_to 'Add new release', new_release_path %>
+</p>
+
+<table cellpadding="10">
+	<tr>
+		<td>Catalogue Number</td>
+		<td>Artist</td>
+		<td>Title</td>
+		<td>Actions</td>
+	</tr>
+<% for release in @releases do %>
+	<tr class="<%= cycle('odd','even') %>">
+		<td><%= release.catalogue_number %></td>
+		<td><%= release.artist.name %></td>
+		<td><%= release.title %></td>
+		<td>
+			<%= link_to 'Edit', edit_release_path(release) %> | 
+			<%= link_to 'Delete', release_path(release), :method => :delete, :confirm => 'Are you sure?'%>
+		</td>
+	</tr>
+<% end %>
+
+</table>
+
+<p>
+	<%= link_to 'Add new release', new_release_path %>
+</p>
