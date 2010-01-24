@@ -6,7 +6,7 @@ class ReleasesController < ApplicationController
     
     respond_to do |format| 
       format.html 
-      format.xml { render :layout => false, :xml => @releases.to_xml } 
+      format.xml { render :layout => false, :xml => @releases.to_xml(:include => :artist) } 
     end
   end
   
