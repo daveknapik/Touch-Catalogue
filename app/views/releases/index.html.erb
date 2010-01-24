@@ -19,7 +19,11 @@
 <% for release in @releases do %>
 	<tr class="<%= cycle('odd','even') %>">
 		<td><%= release.catalogue_number %></td>
-		<td><%= release.artist.name %></td>
+		<td>
+			<% if !release.artist.nil? %>
+				<%= release.artist.name %>
+			<% end %>
+		</td>
 		<td><%= release.title %></td>
 		<td><%= release.release_date %></td>
 		<% if current_admin %>
