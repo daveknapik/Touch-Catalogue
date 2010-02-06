@@ -15,7 +15,6 @@ xml.releases (:type => "array") do
       xml.updated_at release.updated_at
       xml.duration release.duration
       xml.track_listing release.track_listing
-      xml.reviews release.reviews
     end
   end
 end
