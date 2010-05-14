@@ -13,7 +13,7 @@ xml.releases (:type => "array") do
       xml.release_date release.release_date
       xml.created_at release.created_at
       xml.updated_at release.updated_at
-      xml.duration release.duration
+      xml.release_duration release.duration
       xml.track_listing release.track_listing
     end
   end
