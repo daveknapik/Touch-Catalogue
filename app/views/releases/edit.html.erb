@@ -7,6 +7,11 @@
 	</p>
 	
 	<p>
+		<%= form.label :record_label %><br />
+		<%= select :release, :record_label, {"Touch" => "Touch", "Ash International" => "Ash International", "Tapeworm" => "Tapeworm"}.sort %>
+	</p>
+	
+	<p>
 		<%= form.label :artist_name %><br />
 		<%= text_field_with_auto_complete :release, :artist_name, {}, {:url => artists_path, :format => :js, :method => :get, :with => "'search=' + element.value"} %>
 	</p>
