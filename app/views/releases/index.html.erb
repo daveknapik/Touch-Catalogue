@@ -12,6 +12,7 @@
 		<td>Artist</td>
 		<td>Title</td>
 		<td>Release Date</td>
+		<td>Label</td>
 		<% if current_admin %>
 			<td>Actions</td>
 		<% end %>
@@ -26,6 +27,7 @@
 		</td>
 		<td><%= release.title %></td>
 		<td><%= release.release_date %></td>
+		<td><%= release.record_label %></td>
 		<% if current_admin %>
 			<td>
 				<%= link_to 'View', release_path(release) %><br />

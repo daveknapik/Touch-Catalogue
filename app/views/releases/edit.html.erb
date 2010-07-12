@@ -8,7 +8,7 @@
 	
 	<p>
 		<%= form.label :artist_name %><br />
-		<%= text_field_with_auto_complete :release, :artist_name, {}, {:url => formatted_artists_path(:js), :method => :get, :with => "'search=' + element.value"} %>
+		<%= text_field_with_auto_complete :release, :artist_name, {}, {:url => artists_path, :format => :js, :method => :get, :with => "'search=' + element.value"} %>
 	</p>
 	
 	<p>
