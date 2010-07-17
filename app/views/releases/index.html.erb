@@ -1,5 +1,14 @@
 <% title 'Releases' %>
 
+<p>
+Publisher
+<%= select :release, 
+		   :publisher, 
+		   {"All publishers" => "all","Touch" => "Touch", "Ash International" => "Ash International", "OR" => "OR"}.sort,
+		   {:selected => params[:publisher]},
+		   {:onchange => "document.location = '/releases/publisher/' + this.value"}%>
+</p>
+
 <% if current_admin %>
 <p>
 	<%= link_to 'Add new release', new_release_path %>

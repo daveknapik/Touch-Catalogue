@@ -1,5 +1,5 @@
 class ReleasesController < ApplicationController
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show, :list_by_publisher]
   
   def index
     @releases = Release.find(:all, :order => "release_date DESC")
@@ -55,7 +55,11 @@ class ReleasesController < ApplicationController
   def list_by_publisher
     @publisher = params[:publisher].gsub("-"," ")
     
-    @releases = Release.find(:all, :conditions => ["publisher = ?", @publisher], :order => "release_date DESC")
+    if (@publisher == "all")
+      @releases = Release.find(:all, :order => "release_date DESC")
+    else
+      @releases = Release.find(:all, :conditions => ["publisher = ?", @publisher], :order => "release_date DESC")
+    end
     
     respond_to do |format| 
       format.html {render :template => "releases/index"}
