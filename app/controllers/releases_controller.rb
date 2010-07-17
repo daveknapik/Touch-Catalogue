@@ -51,6 +51,18 @@ class ReleasesController < ApplicationController
     redirect_to :action => "index"
   end
   
+  #Custom XML feed methods based on release's publisher
+  def list_by_publisher
+    @publisher = params[:publisher].gsub("-"," ")
+    
+    @releases = Release.find(:all, :conditions => ["publisher = ?", @publisher], :order => "release_date DESC")
+    
+    respond_to do |format| 
+      format.html {render :template => "releases/index"}
+      format.xml {render :template => "releases/index", :layout => false} 
+    end
+  end
+  
   private
     def login_required
       unless current_admin

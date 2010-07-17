@@ -47,4 +47,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :artists
   map.resources :releases
   map.resources :admin_sessions
+  
+  map.connect 'releases/publisher/:publisher.:format', :controller => 'releases', :action => 'list_by_publisher'
 end
