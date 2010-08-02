@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100716215014) do
+ActiveRecord::Schema.define(:version => 20100802163044) do
 
   create_table "admins", :force => true do |t|
     t.string   "login"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20100716215014) do
   end
 
   create_table "artists", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :limit => 1000
     t.text     "bio"
     t.string   "photo_url"
     t.datetime "created_at"
@@ -30,12 +30,12 @@ ActiveRecord::Schema.define(:version => 20100716215014) do
 
   create_table "releases", :force => true do |t|
     t.string   "catalogue_number"
-    t.string   "title"
+    t.string   "title",            :limit => 1000
     t.string   "duration"
     t.text     "track_listing"
     t.date     "release_date"
     t.string   "cover_art_url"
-    t.string   "release_url"
+    t.string   "release_url",      :limit => 1000
     t.string   "itunes_url"
     t.string   "mp3_sample_url"
     t.text     "description"
