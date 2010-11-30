@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  login: MyString
-
-two:
-  login: MyString
+mike:
+    login: mike
+    password_salt: <%= salt = Authlogic::Random.hex_token %>
+    crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("benrocks" + salt) %>
+    persistence_token: <%= Authlogic::Random.hex_token %>
