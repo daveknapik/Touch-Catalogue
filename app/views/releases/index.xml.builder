@@ -1,4 +1,4 @@
-xml.releases (:type => "array") do 
+xml.releases(:type => "array") do 
   @releases.each do |release|
     xml.release do
       xml.id release.id
