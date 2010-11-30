@@ -1,27 +1,31 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  catalogue_number: MyString
-  title: MyString
-  duration: MyString
-  track_listing: MyText
-  release_date: 2010-01-18
-  cover_art_url: MyString
-  release_url: MyString
-  itunes_url: MyString
-  mp3_sample_url: MyString
-  description: MyText
-  reviews: MyText
+an_ark_for_the_listener:
+  catalogue_number: TO81
+  title: An Ark for the Listener
+  duration: 49:34
+  track_listing:
+  release_date: 2010-09-20
+  cover_art_url: http://www.touchmusic.org.uk/images/245x/TO81.jpg
+  release_url: http://www.touchmusic.org.uk/catalogue/to81_philip_jeck_an_ark_for_th.html
+  itunes_url:
+  mp3_sample_url: https://touchshop.org/media/remix.mp3
+  description:
+  reviews:
+  publisher: Touch
+  artist: philip_jeck
 
-two:
-  catalogue_number: MyString
-  title: MyString
-  duration: MyString
-  track_listing: MyText
-  release_date: 2010-01-18
-  cover_art_url: MyString
-  release_url: MyString
-  itunes_url: MyString
-  mp3_sample_url: MyString
-  description: MyText
-  reviews: MyText
+sand:
+    catalogue_number: TO67
+    title: Sand
+    duration: 44:39
+    track_listing:
+    release_date: 2008-04-01
+    cover_art_url: http://www.touchmusic.org.uk/images/245x/TO67.jpg
+    release_url: http://www.touchmusic.org.uk/catalogue/to67_philip_jeck_sand.html
+    itunes_url:
+    mp3_sample_url: http://www.philipjeck.com/mp3s/Fanfares.mp3
+    description:
+    reviews:
+    publisher: Touch
+    artist: philip_jeck
