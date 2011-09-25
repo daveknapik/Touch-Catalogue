@@ -23,7 +23,7 @@
 
 <p>
 	<strong>Cover art URL:</strong>
-	<% if @release.cover_art_url %>
+	<% if !@release.cover_art_url.blank? %>
 		<%= link_to @release.cover_art_url, @release.cover_art_url  %><br />
 		<%= image_tag(@release.cover_art_url) %>
 	<% end %>

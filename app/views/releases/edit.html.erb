@@ -1,6 +1,8 @@
+<%= render :partial => "artist_autocomplete", :locals => {:artists => @artists} %>
+
 <% title 'Edit Release' %>
 
-<% form_for(@release) do |form| %>
+<%= form_for(@release) do |form| %>
 	<p>
 		<%= form.label :catalogue_number %><br />
 		<%= form.text_field :catalogue_number %>
@@ -13,7 +15,7 @@
 	
 	<p>
 		<%= form.label :artist_name %><br />
-		<%= text_field_with_auto_complete :release, :artist_name, {}, {:url => artists_path, :format => :js, :method => :get, :with => "'search=' + element.value"} %>
+		<%= text_field :release, :artist_name %>
 	</p>
 	
 	<p>

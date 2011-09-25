@@ -16,6 +16,7 @@ class ReleasesController < ApplicationController
   
   def new
     @release = Release.new
+    @artists = Artist.all
   end
   
   def create
@@ -31,6 +32,7 @@ class ReleasesController < ApplicationController
   
   def edit
     @release = Release.find params[:id]
+    @artists = Artist.all
   end
   
   def update
